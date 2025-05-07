@@ -4,7 +4,7 @@
     --secondary-color: #7C3AED;
     --text-color: #1F2937;
     --light-text: #6B7280;
-    --background: #FFFFFF;
+    --background: #000000;
     --light-background: #F3F4F6;
     --border-color: #E5E7EB;
     --transition: all 0.3s ease;
@@ -38,7 +38,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(0, 0, 0, 0.95);
     backdrop-filter: blur(5px);
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -104,7 +104,7 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 2rem;
 }
 
@@ -216,7 +216,7 @@ body {
 }
 
 .about-card {
-    background: white;
+    background: rgb(0, 0, 0);
     padding: 2rem;
     border-radius: 10px;
     text-align: center;
@@ -254,7 +254,7 @@ body {
 }
 
 .speaker-card {
-    background: white;
+    background: rgb(0, 0, 0);
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -309,7 +309,7 @@ body {
 .tab-btn {
     padding: 0.75rem 2rem;
     border: none;
-    background: white;
+    background: rgb(0, 0, 0);
     border-radius: 25px;
     font-weight: 500;
     cursor: pointer;
@@ -318,7 +318,7 @@ body {
 
 .tab-btn.active {
     background: var(--primary-color);
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .schedule-item {
@@ -654,3 +654,120 @@ body {
       transform: translateY(0);
     }
   }
+
+
+  .contenedor2{
+    height: 200px;
+    width: 200px;
+    perspective: 1000px;
+    margin: 170px auto;
+    transform:scale(.9)rotateX(-10deg);
+    transform-style: preserve-3d; 
+  
+}
+.contenedor2 .box{
+    animation: rotar 50s infinite linear;
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+   transition: 2s;
+  
+}
+.elementos{
+    height: 200px;
+    width: 150px;
+    position: absolute;
+    box-shadow: 0 0 10px #000000;
+}
+:root{
+    --transladacion:translateZ(250px);
+}
+.elementos:nth-child(1){
+    transform: rotateY(0deg) var(--transladacion);
+}
+.elementos:nth-child(2){
+    transform: rotateY(45deg) var(--transladacion);
+}
+.elementos:nth-child(3){
+    transform: rotateY(90deg) var(--transladacion);
+}
+.elementos:nth-child(4){
+    transform: rotateY(135deg) var(--transladacion);
+}
+.elementos:nth-child(5){
+    transform: rotateY(180deg) var(--transladacion);
+}
+.elementos:nth-child(6){
+    transform: rotateY(225deg) var(--transladacion);
+}
+.elementos:nth-child(7){
+    transform: rotateY(270deg) var(--transladacion);
+
+}
+.elementos:nth-child(8){
+    transform: rotateY(315deg) var(--transladacion);
+
+}
+.elementos:nth-child(9){
+    transform: rotateY(360deg) var(--transladacion);
+    
+}
+.elementos img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #000000);
+    position: absolute;
+    backface-visibility: hidden;
+    
+}
+.elementos img:nth-child(2){
+    transform: rotateY(180deg)
+}
+.imagen2:nth-child(1){
+    animation: rotar2 50s
+}
+.piso{
+    height: 43em;
+    width:43em;
+    transform: rotateX(90deg) translateX(-280px) translateY(40px)translateZ(140px);
+     background: -webkit-radial-gradient(center center, farthest-side , #9993, transparent);
+    border-radius: 50%;
+    
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.titulo{
+    height: 200px;
+    width: 300px;
+    flex-direction: column;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1.7em;
+}
+.titulo p{
+    margin: 0;
+    padding: 5px;
+}
+
+@keyframes rotar{
+   
+    to{
+        transform: rotateY(-360deg) ;
+    }
+}
+.imagenes{
+    height: 200px;
+    width: 150px;
+    transition: 2s
+        ;
+    transform-style: preserve-3d;
+}
+
+.hero2{
+    background-color: black;
+}

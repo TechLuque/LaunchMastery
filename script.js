@@ -180,3 +180,5 @@ speakers2.forEach(speaker => {
     displayArea2.classList.add('active');
   });
 });
+
+
