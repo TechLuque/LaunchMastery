@@ -98,18 +98,17 @@ body {
 /* Hero section */
 .hero {
     min-height: 100vh;
-    background: linear-gradient(rgba(79, 70, 229, 0.9), rgba(124, 58, 237, 0.9)),
-                url('https://images.pexels.com/photos/7130560/pexels-photo-7130560.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover;
+    background-image: url("/LMV_BG.webp");
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     padding: 2rem;
 }
 
 .hero-content {
-    max-width: 800px;
+    max-width: 900px;
 }
 
 .hero h1 {
@@ -771,3 +770,5 @@ body {
 .hero2{
     background-color: black;
 }
+
+
