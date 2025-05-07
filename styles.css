@@ -308,7 +308,7 @@ body {
 .tab-btn {
     padding: 0.75rem 2rem;
     border: none;
-    background: rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
     border-radius: 25px;
     font-weight: 500;
     cursor: pointer;
@@ -317,7 +317,7 @@ body {
 
 .tab-btn.active {
     background: var(--primary-color);
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 .schedule-item {
@@ -770,3 +770,153 @@ body {
 .hero2{
     background-color: black;
 }
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .speakers-section {
+    background-image: url("/Fondo2.jpg")
+  }
+
+  .title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #ffffff;
+    user-select: none;
+  }
+
+  .speakers-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: visible;
+    user-select: none;
+  }
+
+  /* Highlight container: collapses when hidden, expands on visible */
+  .highlight-container {
+    width: 280px;
+    max-width: 80vw;
+    border-radius: 16px;
+    background: linear-gradient(145deg, #1c242f, #11181f);
+    box-shadow: 0 15px 35px rgba(88, 166, 255, 0.85);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    user-select: none;
+    overflow: hidden;
+
+    opacity: 0;
+    height: 0;
+    padding: 0;
+    margin-bottom: 0;
+    pointer-events: none;
+    transition:
+      opacity 0.4s ease,
+      height 0.4s ease,
+      margin-bottom 0.4s ease,
+      padding 0.4s ease,
+      transform 0.4s cubic-bezier(0.4,0,0.2,1);
+    transform: scale(0.95);
+  }
+
+  .highlight-container.visible {
+    opacity: 1;
+    height: 280px;
+    padding: 0.75rem 0 0 0;
+    margin-bottom: 12px;
+    pointer-events: auto;
+    transform: scale(1);
+  }
+
+  .highlight-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 16px 16px 0 0;
+    user-select: none;
+    pointer-events:none;
+  }
+
+  .highlight-name {
+    padding: 0.5rem 1rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #58a6ff;
+    background-color: #0d1117;
+    border-radius: 0 0 16px 16px;
+    width: 100%;
+    text-align: center;
+    user-select: none;
+  }
+
+  .thumbnails {
+    display: flex;
+    gap: 1.25rem;
+    justify-content: center;
+    user-select: none;
+    z-index: 10;
+  }
+
+  .thumbnail {
+    width: 110px;
+    cursor: pointer;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(88, 166, 255, 0.3);
+    background: #161b22;
+    transition:
+      box-shadow 0.3s ease,
+      transform 0.3s ease;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .thumbnail.selected,
+  .thumbnail:hover {
+    box-shadow: 0 6px 20px rgba(88, 166, 255, 0.7);
+    transform: scale(1.05);
+    outline: none;
+  }
+
+  .thumbnail img {
+    width: 100%;
+    display: block;
+    border-radius: 12px 12px 0 0;
+    pointer-events: none;
+  }
+
+  .thumbnail-name {
+    padding: 0.4rem 0.3rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    background: #0d1117;
+    border-radius: 0 0 12px 12px;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+    .highlight-container.visible {
+      height: 200px;
+      padding: 0.5rem 0 0 0;
+      margin-bottom: 10px;
+    }
+    .highlight-img {
+      height: 150px;
+    }
+    .highlight-name {
+      font-size: 1rem;
+      padding: 0.4rem 0.8rem;
+    }
+    .thumbnail {
+      width: 70px;
+    }
+  }

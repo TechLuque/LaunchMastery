@@ -43,33 +43,38 @@
 
       
 
-        <section id="speakers" class="speakers">
-			<div class="container2">
-				<div class="speaker-grid2" id="speakerGrid2">
-				  <div class="speaker2" data-name="Jeyson Prada" data-img="Jeyson.png">
-					<div class="speaker-name-tag2">Jeyson Prada</div>
-					<img src="Jeyson.png" alt="Speaker 1" />
-				  </div>
-				  <div class="speaker2" data-name="Susi Vereecken" data-img="susi.jpg">
-					<div class="speaker-name-tag2">Susi Vereecken</div>
-					<img src="susi.jpg" alt="Speaker 2" />
-				  </div>
-				  <div class="speaker2" data-name="Mike Munzvil" data-img="mike.jpg">
-					<div class="speaker-name-tag2">Mike Munzvil</div>
-					<img src="mike.jpg" alt="Speaker 3" />
-				  </div>
-				  <div class="speaker2" data-name="Andres Ricci" data-img="andres.jpg">
-					<div class="speaker-name-tag2">Andres Ricci</div>
-					<img src="andres.jpg" alt="Speaker 4" />
-				  </div>
-				  <!-- Agrega más speakers aquí -->
-				</div>
-				<div class="display-area2" id="displayArea2">
-				  <img id="displayImage2" src="" alt="" />
-				  <h2 id="displayName2"></h2>
-				</div>
-			  </div>
-        </section>
+        <section class="speakers-section" aria-label="Sección de Speakers">
+            <center><h2 class="title">NUESTROS SPEAKERS</h2></center>
+            <div class="speakers-wrapper">
+              <div class="highlight-container" aria-live="polite" aria-atomic="true" aria-label="Speaker destacado" tabindex="0">
+                <img class="highlight-img" src="" alt="" />
+                <div class="highlight-name"></div>
+              </div>
+              <div class="thumbnails" role="list" tabindex="0" aria-label="Lista de speakers">
+                <div class="thumbnail" role="listitem" tabindex="0" aria-label="Speaker Juan Pérez">
+                  <img src="JEYSON LMV.png" alt="Foto de Juan Pérez" />
+                  <div class="thumbnail-name">Jeyson Prada</div>
+                </div>
+                <div class="thumbnail" role="listitem" tabindex="0" aria-label="Speaker María López">
+                  <img src="JUANJO LMV.png" alt="Foto de María López" />
+                  <div class="thumbnail-name">Juanjo Arenales</div>
+                </div>
+                <div class="thumbnail" role="listitem" tabindex="0" aria-label="Speaker Carlos Gómez">
+                  <img src="JULIANA LMV.png" alt="Foto de Carlos Gómez" />
+                  <div class="thumbnail-name">Juliana Peña</div>
+                </div>
+                <div class="thumbnail" role="listitem" tabindex="0" aria-label="Speaker Ana Torres">
+                  <img src="ALVARO LMV.png" alt="Foto de Ana Torres" />
+                  <div class="thumbnail-name">Alvaro Luque</div>
+                </div>
+                <div class="thumbnail" role="listitem" tabindex="0" aria-label="Speaker Luis Martínez">
+                  <img src="MIKE LMV.png" alt="Foto de Luis Martínez" />
+                  <div class="thumbnail-name">Mike Munzvil</div>
+                </div>
+              </div>
+            </div>
+            <br>
+          </section>
 
         <section id="program" class="program">
             <div class="container">
@@ -127,39 +132,7 @@
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>TECHSUMMIT 2025</h3>
-                    <p>El evento virtual más importante de tecnología e innovación en Latinoamérica.</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="icon-facebook"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="icon-twitter"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="icon-linkedin"></i></a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h3>Enlaces Rápidos</h3>
-                    <ul>
-                        <li><a href="#home">Inicio</a></li>
-                        <li><a href="#program">Programa</a></li>
-                        <li><a href="#speakers">Ponentes</a></li>
-                        <li><a href="#about">Sobre el Evento</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Contacto</h3>
-                    <p>Email: info@techsummit2025.com</p>
-                    <p>Tel: +1 (555) 123-4567</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 TECHSUMMIT. Todos los derechos reservados.</p>
-            </div>
-        </div>
-    </footer>
+
 
     <script src="script.js"></script>
 </body>

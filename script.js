@@ -181,3 +181,95 @@ speakers2.forEach(speaker => {
   });
 });
 
+
+
+const thumbnails = Array.from(document.querySelectorAll('.thumbnail'));
+  const highlightContainer = document.querySelector('.highlight-container');
+  const highlightImage = highlightContainer.querySelector('.highlight-img');
+  const highlightName = highlightContainer.querySelector('.highlight-name');
+
+  let activeIndex = -1;
+  let hideTimeoutId = null;
+
+  function showHighlight(index) {
+    if (activeIndex === index) {
+      // clicking same thumbnail toggles off highlight
+      hideHighlight();
+      return;
+    }
+    activeIndex = index;
+    const selectedThumb = thumbnails[index];
+    const imgSrc = selectedThumb.querySelector('img').src;
+    const altText = selectedThumb.querySelector('img').alt;
+    const nameText = selectedThumb.querySelector('.thumbnail-name').textContent;
+
+    highlightImage.src = imgSrc;
+    highlightImage.alt = altText;
+    highlightName.textContent = nameText;
+
+    highlightContainer.classList.add('visible');
+
+    thumbnails.forEach((thumb, i) => {
+      if(i === activeIndex) {
+        thumb.classList.add('selected');
+        thumb.setAttribute('aria-pressed', 'true');
+      } else {
+        thumb.classList.remove('selected');
+        thumb.setAttribute('aria-pressed', 'false');
+      }
+    });
+
+    resetHideTimer();
+  }
+
+  function hideHighlight() {
+    activeIndex = -1;
+    highlightContainer.classList.remove('visible');
+    thumbnails.forEach(thumb => {
+      thumb.classList.remove('selected');
+      thumb.setAttribute('aria-pressed', 'false');
+    });
+    clearHideTimer();
+  }
+
+  function resetHideTimer() {
+    clearHideTimer();
+    // Hide automatically after 30 seconds
+    hideTimeoutId = setTimeout(() => {
+      hideHighlight();
+    }, 30000);
+  }
+
+  function clearHideTimer() {
+    if (hideTimeoutId) {
+      clearTimeout(hideTimeoutId);
+      hideTimeoutId = null;
+    }
+  }
+
+  thumbnails.forEach((thumb, index) => {
+    thumb.addEventListener('click', (e) => {
+      e.stopPropagation();
+      showHighlight(index);
+    });
+    thumb.addEventListener('keydown', (e) => {
+      if(e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        showHighlight(index);
+      }
+    });
+  });
+
+  // Clicking outside closes highlight
+  document.body.addEventListener('click', () => {
+    hideHighlight();
+  });
+  highlightContainer.addEventListener('click', e => e.stopPropagation());
+
+  // Initialize ARIA
+  thumbnails.forEach(thumb => {
+    thumb.setAttribute('aria-pressed', 'false');
+  });
+
+  // Initially hide highlight
+  hideHighlight();
