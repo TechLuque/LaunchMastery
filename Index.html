@@ -5,7 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TECHSUMMIT 2025 - Virtual Event</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="speakers/speakers.css">
+    <link rel="stylesheet" href="nav/nav.css">
+    <link rel="stylesheet" href="about/about.css">
+    <link rel="stylesheet" href="program/program.css">
+    <link rel="stylesheet" href="authentication/authentication.css">
+    <link rel="stylesheet" href="questions/questions.css">
+    <link rel="stylesheet" href="time/time.css">
 </head>
 
 <body>
@@ -23,6 +30,7 @@
                     Tu navegador no soporta el elemento de video.
                 </video>
                 <br><br>
+        <!---TIME------------------------------------------------------------------------------------------------------------------------>
                 <div id="countdown" class="countdown">
                     <div class="countdown-item">
                         <span id="days">00</span>
@@ -41,24 +49,36 @@
                         <label>Segundos</label>
                     </div>
                 </div>
+         <!---AUTHENTICATION---------------------------------------------------------------------------------------------------------------------------------->
                 <div class="hero-buttons">
                     <a href="#register" class="primary-btn">ADQUIERE TU ENTRADA A LAUNCH MASTERY</a>
                 </div>
+         <!------------------------------------------------------------------------------------------------------------------------------------->
             </div>
         </section>
+        <!------------------------------------------------------------------------------------------------------------------------------------->
+
+        <!---INTRO------------------------------------------------------------------------------------------------------------------------>
+
         <section class="about-event">
             <h2>LAUNCH MASTERY</h2>
             <p>
                 Launch Mastery es un evento virtual de 3 días, que ocurre solo una vez al año, donde aprenderás la metodología que ha generado más de $30 millones de dólares en ventas para mis estudiantes.
             </p>
         </section>
+        
+        <!-------------------------------------------------------------------------------------------------------------------------------->
 
+
+
+
+        <!-----GOALS---------------------------------------------------------------------------------------------------------------------->
         <section class="launch-goals">
             <h2>Qué vas a lograr en Launch Mastery Virtual</h2>
 
             <div class="goal-item">
                 <div class="goal-img">
-                    <img src="/LM25_Logro1-1.webp" alt="Paso 1">
+                    <img src="images/LM25_Logro1-1.webp" alt="Paso 1">
                 </div>
                 <div class="goal-text">
                     <span class="goal-number">1</span>
@@ -72,7 +92,7 @@
 
             <div class="goal-item reverse">
                 <div class="goal-img">
-                    <img src="/LM25_Logro5-1.webp" alt="Paso 2">
+                    <img src="images/LM25_Logro5-1.webp" alt="Paso 2">
                 </div>
                 <div class="goal-text">
                     <span class="goal-number">2</span>
@@ -86,7 +106,7 @@
 
             <div class="goal-item">
                 <div class="goal-img">
-                    <img src="/LM25_Logro3-1.webp" alt="Paso 3">
+                    <img src="images/LM25_Logro3-1.webp" alt="Paso 3">
                 </div>
                 <div class="goal-text">
                     <span class="goal-number">3</span>
@@ -97,6 +117,14 @@
                 </div>
             </div>
         </section>
+
+        
+        <!------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
+
+        <!-----CRONOGRAMA---------------------------------------------------------------------------------------------------------------------->
         <section id="program" class="program">
             <div class="container">
                 <h2>Programa del Evento</h2>
@@ -108,10 +136,15 @@
                 <div class="schedule-container" id="scheduleContainer"></div>
             </div>
         </section>
+        <!------------------------------------------------------------------------------------------------------------------------------------->
 
+
+
+
+        <!-----SPEAKERS------------------------------------------------------------------------------------------------------------------------>
         <section class="speaker-card" ="register">
             <div class="speaker-photo">
-              <img id="photo" src="ALVARO LMV.png" alt="Foto del speaker">
+              <img id="photo" src="images/ALVARO LMV.png" alt="Foto del speaker">
               <div class="name-nav">
                 <button onclick="prev()">◀</button>
                 <span id="name">Nombre 1</span>
@@ -125,20 +158,29 @@
               </p>
             </div>
           </section>
-          
-          
+        <!------------------------------------------------------------------------------------------------------------------------------------->
 
+
+
+
+
+        <!-----QUESTIONS----------------------------------------------------------------------------------------------------------------------->
+          
         <section id="faq" class="faq">
             <div class="container">
                 <h2>Preguntas Frecuentes</h2>
                 <div class="faq-container" id="faqContainer"></div>
             </div>
         </section>
+        <!------------------------------------------------------------------------------------------------------------------------------------->
     </main>
 
 
 
     <script src="script.js"></script>
+    <script src="time/time.js"></script>
+    <script src="questions/questions.js"></script>
+    <script src="authentication/authentication.js"></script>
 </body>
 
 </html>
