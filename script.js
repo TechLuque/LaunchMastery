@@ -8,7 +8,7 @@ mobileMenuBtn.addEventListener('click', () => {
 
 // Countdown timer
 function updateCountdown() {
-    const eventDate = new Date('2025-06-15T09:00:00').getTime();
+    const eventDate = new Date('2025-06-09T09:00:00').getTime();
     const now = new Date().getTime();
     const timeLeft = eventDate - now;
 
@@ -27,6 +27,17 @@ setInterval(updateCountdown, 1000);
 updateCountdown();
 
 // Speakers data
+
+const video = document.getElementById('miVideo');
+
+video.addEventListener('click', () => {
+  if (video.muted) {
+    video.muted = false; // Activa el audio
+  } else {
+    video.muted = true;  // Opcional: vuelve a silenciar si se da otro clic
+  }
+});
+
 
 
 // Program tabs functionality
@@ -271,5 +282,54 @@ const thumbnails = Array.from(document.querySelectorAll('.thumbnail'));
     thumb.setAttribute('aria-pressed', 'false');
   });
 
-  // Initially hide highlight
-  hideHighlight();
+
+  const speakers = [
+    {
+      photo: '/JUANJO LMV.png',
+      name: 'Nombre 1',
+      title: 'CEO',
+      bio: 'Este es el speaker 1. Aquí va su descripción épica, logros y lo que compartirá en el evento.'
+    },
+    {
+      photo: '/JULIANA LMV.png',
+      name: 'Nombre 2',
+      title: 'Fundador de X',
+      bio: 'Este speaker ha impactado miles de negocios digitales en LATAM.'
+    },
+    {
+      photo: '/ALVARO LMV.png',
+      name: 'Nombre 3',
+      title: 'Mentor Internacional',
+      bio: 'Conferencista global que ha entrenado a más de 20 mil emprendedores.'
+    }
+  ];
+
+  let index = 0;
+
+  function updateSpeaker() {
+    const speaker = speakers[index];
+    document.getElementById('photo').src = speaker.photo;
+    document.getElementById('name').innerText = speaker.name;
+    document.getElementById('title').innerText = speaker.title;
+    document.getElementById('bio').innerText = speaker.bio;
+  }
+
+  function next() {
+    index = (index + 1) % speakers.length;
+    updateSpeaker();
+  }
+
+  function prev() {
+    index = (index - 1 + speakers.length) % speakers.length;
+    updateSpeaker();
+  }
+
+  setInterval(next, 10000); // Auto slide cada 10 segundos
+
+  updateSpeaker(); // Inicializar
+
+
+
+  // Animated
+
+  

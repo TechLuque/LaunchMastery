@@ -24,6 +24,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
+    background-color: #000;
 }
 
 .container {
@@ -98,7 +99,7 @@ body {
 /* Hero section */
 .hero {
     min-height: 100vh;
-    background-image: url("/LMV_BG.webp");
+    background-image: url(/LMV_BG.webp);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -779,7 +780,7 @@ body {
   }
 
   .speakers-section {
-    background-image: url("/Fondo2.jpg")
+    background-color: #0F0A26;
   }
 
   .title {
@@ -920,3 +921,210 @@ body {
       width: 70px;
     }
   }
+
+
+  .featured-topics {
+    background-color: #0F0A26;
+    padding: 60px 20px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+  
+  .featured-topics h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+  }
+  
+  .topics-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .topic-card {
+    background-color: #1A103D;
+    border-radius: 12px;
+    padding: 30px 20px;
+    width: 260px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .topic-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .topic-card .icon {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: #6C3FFF;
+  }
+  
+  .topic-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .topic-card p {
+    font-size: 14px;
+    color: #CFCFE0;
+  }
+  
+
+  .about-event {
+    background-color: #0F0A26; /* fondo púrpura oscuro */
+    padding: 60px 20px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+  
+  .about-event h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+  }
+  
+  .about-event p {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #CFCFE0; /* gris claro para contraste */
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .launch-goals {
+    background-image: url(/LAUNCH\ MASTERY_FONDO\ 8.jpg);
+    padding: 60px 20px;
+    color: #ffffff;
+    max-width: auto;
+    margin: auto;
+  }
+  
+  .launch-goals h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 50px;
+  }
+  
+  .goal-item {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+  }
+  
+  .goal-item.reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .goal-img img {
+    width: 320px;
+    border-radius: 10px;
+  }
+  
+  .goal-text {
+    flex: 1;
+    max-width: 600px;
+  }
+  
+  .goal-number {
+    display: inline-block;
+    background: #00ffcc;
+    color: #000;
+    font-weight: bold;
+    font-size: 24px;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    line-height: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .goal-text h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .goal-text .highlight {
+    background-color: #8c31b0;
+    color: #000000;
+    padding: 0 4px;
+  }
+  
+  .goal-text p {
+    color: #cccccc;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+
+  .speaker-card {
+    background-color: #0F0A26;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    gap: 40px;
+    max-width: 1100px;
+    margin: auto;
+  }
+  
+  .speaker-photo {
+    text-align: center;
+  }
+  
+  .speaker-photo img {
+    width: 260px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
+  }
+  
+  .name-nav {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-size: 18px;
+  }
+  
+  .name-nav button {
+    background: none;
+    border: 2px solid #00FFD1;
+    color: #00FFD1;
+    padding: 6px 12px;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .name-nav button:hover {
+    background: #00FFD1;
+    color: #000;
+  }
+  
+  .speaker-info {
+    max-width: 500px;
+    text-align: left;
+  }
+  
+  .speaker-info h3 {
+    font-size: 24px;
+    color: #00FFD1;
+    margin-bottom: 15px;
+  }
+  
+  .speaker-info p {
+    font-size: 16px;
+    color: #CCCCCC;
+    line-height: 1.6;
+  }
+  
