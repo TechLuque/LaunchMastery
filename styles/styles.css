@@ -35,6 +35,7 @@ body {
 
 /* Hero section */
 .hero {
+    width: auto;
     min-height: 100vh;
     background-image: url(../images/LMV_BG.webp);
     display: flex;
@@ -42,20 +43,16 @@ body {
     justify-content: center;
     text-align: center;
     color: rgb(255, 255, 255);
-    padding: 2rem;
+    padding: 1rem;
 }
 
 .hero-content {
+    width: 100%;
     max-width: 900px;
 }
 
 
-/* Button styles */
-.hero-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-}
+
 
 .hero h1 {
     font-size: 4rem;
@@ -251,6 +248,10 @@ body {
 
 /* Responsive styles */
 @media (max-width: 768px) {
+
+    body, html {
+      overflow-x: hidden;
+    }
     .nav-links {
         display: none;
     }
@@ -285,7 +286,16 @@ body {
     }
 
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 1.8rem;
+    }
+
+    .hero .subtitle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        width: 100%;
     }
 
     .event-info {
@@ -293,9 +303,7 @@ body {
         gap: 1rem;
     }
 
-    .hero-buttons {
-        flex-direction: column;
-    }
+
 
     .register-container {
         grid-template-columns: 1fr;

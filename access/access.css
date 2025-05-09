@@ -1,0 +1,50 @@
+.hero-buttons {
+    display: flex;
+    /* gap: 1rem; */
+    justify-content: center;
+
+}
+
+.primary-btn, .secondary-btn {
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.primary-btn {
+    background: white;
+    color: var(--primary-color);
+}
+
+.secondary-btn {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.secondary-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+
+
+@media (max-width: 768px) {
+
+
+    .primary-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.8rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        padding: 5%;
+    }
+}
